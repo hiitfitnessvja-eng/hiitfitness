@@ -9,7 +9,7 @@ const BRANCHES = [
   {
     id: "kanuru",
     name: "Currency Nagar branch",
-    address: "2nd Floor, Sri Anuja Balaji Square, vi Seshadri street, 3rd Ln, opp. Currency Nagar, Ramavarapadu, Andhra Pradesh 521108",
+    address: "2nd Floor, Sri Anuja Balaji Square, Seshadri street, 3rd Ln, opp. Currency Nagar, Ramavarapadu, Andhra Pradesh 521108",
     phones: ["999 666 7714", "999 666 5573"],
     hours: {
       weekdays: "5:00 AM - 10:30 AM, 5:00 PM - 9:00 PM",
@@ -54,8 +54,8 @@ export function LandingBranches() {
                 key={branch.id}
                 onClick={() => setSelectedBranch(branch.id as BranchId)}
                 className={`group relative w-full bg-black border rounded-2xl overflow-hidden transition-all duration-300 flex flex-col sm:flex-row cursor-pointer ${isSelected
-                    ? "border-[#EE2A24] shadow-[0_0_30px_rgba(238,42,36,0.25)] opacity-100 scale-[1.01]"
-                    : "border-stone-800 opacity-60 hover:opacity-90 hover:border-stone-700"
+                  ? "border-[#EE2A24] shadow-[0_0_30px_rgba(238,42,36,0.25)] opacity-100 scale-[1.01]"
+                  : "border-stone-800 opacity-60 hover:opacity-90 hover:border-stone-700"
                   }`}
               >
                 {/* Branch Image / Map Graphic */}
