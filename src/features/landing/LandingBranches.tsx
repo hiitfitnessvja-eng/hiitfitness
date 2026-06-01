@@ -16,7 +16,7 @@ const BRANCHES = [
       sunday: "6:00 AM - 11:00 AM"
     },
     googleMapsDirectionsUrl: "https://www.google.com/maps/dir//16.5215298,80.6783943",
-    image: "/images/currency_nagar_branch_new.jpeg",
+    image: "/images/currency_nagar_branch.png.jpeg",
     status: "Active HQ"
   },
   {
