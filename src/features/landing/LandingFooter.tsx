@@ -56,7 +56,7 @@ export function LandingFooter() {
               </span>
             </Link>
             <p className="text-stone-400 text-sm leading-relaxed mb-6 font-medium">
-              Elite facility offering functional training, strength conditioning, MMA, boxing, and high-intensity group workouts designed to push your limits.
+              HIIT Training – Burn More Calories, Build Endurance, Get Results Faster
             </p>
             <div className="flex gap-4">
               <a href="https://www.instagram.com/hiitfitness01?igsh=MWt5Y29ueXM5bDMwcw==" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-400 hover:text-white hover:border-[#EE2A24] hover:bg-[#EE2A24]/10 transition-all">
