@@ -42,7 +42,7 @@ function VideoCard({ vid, onClick }: { vid: typeof videos[0]; onClick: () => voi
     return (
         <div
             onClick={onClick}
-            className="relative cursor-pointer aspect-[3/4] sm:aspect-[9/16] rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(238,42,36,0.2)] border border-stone-800 transition-all duration-500 hover:-translate-y-2 hover:border-[#EE2A24] group bg-stone-900 flex items-center justify-center"
+            className="relative cursor-pointer aspect-[3/4] sm:aspect-[9/16] rounded-2xl overflow-hidden border border-stone-800 transition-all duration-500 hover:-translate-y-2 hover:border-[#FE0000] group bg-stone-900 flex items-center justify-center"
         >
             {/* Fallback text while video is loading or if it's missing */}
             <div className="absolute inset-0 flex flex-col items-center justify-center p-2 text-center z-0">
@@ -62,7 +62,7 @@ function VideoCard({ vid, onClick }: { vid: typeof videos[0]; onClick: () => voi
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent sm:from-black/80 sm:via-transparent sm:to-black/20 z-20 pointer-events-none opacity-100 transition-opacity duration-300" />
 
             <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-6 z-30 translate-y-0 transition-all duration-300 pointer-events-none">
-                <p className="text-white font-bold text-xs sm:text-lg leading-tight drop-shadow-md">
+                <p className="text-white font-bold text-xs sm:text-lg leading-tight drop-">
                     {vid.title}
                 </p>
             </div>
@@ -105,7 +105,7 @@ export function LandingVideos() {
                     onClick={() => setActiveVideo(null)}
                 >
                     <button
-                        className="absolute top-4 right-4 sm:top-8 sm:right-8 text-white hover:text-[#EE2A24] transition-colors z-[110] bg-black/50 p-2 rounded-full backdrop-blur-sm"
+                        className="absolute top-4 right-4 sm:top-8 sm:right-8 text-white hover:text-[#FE0000] transition-colors z-[110] bg-black/50 p-2 rounded-full backdrop-blur-sm"
                         onClick={() => setActiveVideo(null)}
                         aria-label="Close video"
                     >
@@ -113,7 +113,7 @@ export function LandingVideos() {
                     </button>
 
                     <div
-                        className="relative w-full max-w-[400px] sm:max-w-4xl aspect-[9/16] sm:aspect-video rounded-xl sm:rounded-2xl overflow-hidden shadow-[0_0_50px_rgba(238,42,36,0.2)] bg-black/50 border border-stone-800"
+                        className="relative w-full max-w-[400px] sm:max-w-4xl aspect-[9/16] sm:aspect-video rounded-xl sm:rounded-2xl overflow-hidden bg-black/50 border border-stone-800"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <video
@@ -127,16 +127,15 @@ export function LandingVideos() {
                 </div>
             )}
 
-            <section id="videos" className="py-12 sm:py-24 px-4 sm:px-6 bg-black text-white scroll-mt-[var(--header-height)]">
+            <section id="videos" className="py-12 sm:py-10 px-4 sm:px-6 bg-black text-white scroll-mt-[var(--header-height)]">
                 <AnimateOnScroll className="max-w-6xl mx-auto">
                     <div className="text-center mb-8 sm:mb-16">
-                        <h2 className="text-3xl md:text-5xl font-extrabold text-[#EE2A24] mb-3 tracking-tight uppercase">
+                        <h2 className="text-3xl md:text-5xl font-extrabold text-[#FE0000] mb-3 tracking-tight uppercase">
                             Shorts & Reels
                         </h2>
                     </div>
 
-                    {/* Constrained max-width on mobile to prevent videos from becoming too oversized */}
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-8 max-w-[280px] min-[400px]:max-w-[340px] sm:max-w-none mx-auto">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 lg:gap-8 max-w-[280px] min-[400px]:max-w-[340px] sm:max-w-none mx-auto">
                         {videos.map((vid) => (
                             <VideoCard key={vid.id} vid={vid} onClick={() => setActiveVideo(vid.id)} />
                         ))}

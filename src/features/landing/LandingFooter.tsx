@@ -7,7 +7,7 @@ import { Instagram, Facebook, MapPin, Phone, Youtube } from "lucide-react";
 import { useBranch } from "./BranchContext";
 
 const BRANCHES_FOOTER_DATA = {
-  kanuru: {
+  currency_nagar: {
     name: "Currency Nagar branch",
     address: "2nd Floor, Sri Anuja Balaji Square, vi Seshadri street, 3rd Ln, opp. Currency Nagar, Ramavarapadu, Kanuru, Andhra Pradesh 521108",
     phones: [
@@ -28,10 +28,10 @@ const BRANCHES_FOOTER_DATA = {
 export function LandingFooter() {
   const { selectedBranch } = useBranch();
   return (
-    <footer className="bg-black border-t border-[#EE2A24]/30 pt-16 pb-8 px-4 sm:px-6 relative overflow-hidden">
+    <footer className="bg-black border-t border-[#FE0000]/30 pt-16 pb-8 px-4 sm:px-6 relative overflow-hidden">
       {/* Decorative top glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-px bg-gradient-to-r from-transparent via-[#EE2A24]/50 to-transparent" />
-      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#EE2A24]/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-2xl h-px bg-gradient-to-r from-transparent via-[#FE0000]/50 to-transparent" />
+      <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#FE0000]/5 blur-[120px] rounded-full pointer-events-none" />
 
       <AnimateOnScroll className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
@@ -50,7 +50,7 @@ export function LandingFooter() {
                   />
                   HIIT FITNESS
                 </span>
-                <span className="font-sans text-[10px] sm:text-xs font-bold uppercase text-[#EE2A24] tracking-widest mt-1.5 ml-1">
+                <span className="font-sans text-[10px] sm:text-xs font-bold uppercase text-[#FE0000] tracking-widest mt-1.5 ml-1">
                   High Intensity Interval Training
                 </span>
               </span>
@@ -59,13 +59,13 @@ export function LandingFooter() {
               HIIT Training – Burn More Calories, Build Endurance, Get Results Faster
             </p>
             <div className="flex gap-4">
-              <a href="https://www.instagram.com/hiitfitness01?igsh=MWt5Y29ueXM5bDMwcw==" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-400 hover:text-white hover:border-[#EE2A24] hover:bg-[#EE2A24]/10 transition-all">
+              <a href="https://www.instagram.com/hiitfitness01?igsh=MWt5Y29ueXM5bDMwcw==" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-400 hover:text-white hover:border-[#FE0000] hover:bg-[#FE0000]/10 transition-all">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-400 hover:text-white hover:border-[#EE2A24] hover:bg-[#EE2A24]/10 transition-all">
+              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-400 hover:text-white hover:border-[#FE0000] hover:bg-[#FE0000]/10 transition-all">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="https://youtube.com/@hiit_fitness?si=P0vvcx4SiFozU5QH" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-400 hover:text-white hover:border-[#EE2A24] hover:bg-[#EE2A24]/10 transition-all">
+              <a href="https://youtube.com/@hiit_fitness?si=P0vvcx4SiFozU5QH" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-stone-900 border border-stone-800 flex items-center justify-center text-stone-400 hover:text-white hover:border-[#FE0000] hover:bg-[#FE0000]/10 transition-all">
                 <Youtube className="w-5 h-5" />
               </a>
             </div>
@@ -73,13 +73,13 @@ export function LandingFooter() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-bold mb-6 uppercase tracking-wider text-sm border-l-2 border-[#EE2A24] pl-3">Quick Links</h3>
+            <h3 className="text-white font-bold mb-6 uppercase tracking-wider text-sm border-l-2 border-[#FE0000] pl-3">Quick Links</h3>
             <ul className="space-y-3">
-              <li><a href="#programs" className="text-stone-400 hover:text-[#EE2A24] text-sm font-medium transition-colors">Our Programs</a></li>
-              <li><a href="#services" className="text-stone-400 hover:text-[#EE2A24] text-sm font-medium transition-colors">Services</a></li>
-              <li><a href="#facilities" className="text-stone-400 hover:text-[#EE2A24] text-sm font-medium transition-colors">Facilities</a></li>
-              <li><a href="#plans" className="text-stone-400 hover:text-[#EE2A24] text-sm font-medium transition-colors">Pricing Plans</a></li>
-              <li><a href="#testimonials" className="text-stone-400 hover:text-[#EE2A24] text-sm font-medium transition-colors">Success Stories</a></li>
+              <li><a href="#programs" className="text-stone-400 hover:text-[#FE0000] text-sm font-medium transition-colors">Our Programs</a></li>
+              <li><a href="#services" className="text-stone-400 hover:text-[#FE0000] text-sm font-medium transition-colors">Services</a></li>
+              <li><a href="#facilities" className="text-stone-400 hover:text-[#FE0000] text-sm font-medium transition-colors">Facilities</a></li>
+              <li><a href="#plans" className="text-stone-400 hover:text-[#FE0000] text-sm font-medium transition-colors">Pricing Plans</a></li>
+              <li><a href="#testimonials" className="text-stone-400 hover:text-[#FE0000] text-sm font-medium transition-colors">Success Stories</a></li>
             </ul>
           </div>
 

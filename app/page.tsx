@@ -3,6 +3,7 @@ import { LandingFacilities } from "@/features/landing/LandingFacilities";
 import { LandingServices } from "@/features/landing/LandingServices";
 import { LandingPlans } from "@/features/landing/LandingPlans";
 import { LandingBranches } from "@/features/landing/LandingBranches";
+import { LandingStats } from "@/features/landing/LandingStats";
 import { LandingContact } from "@/features/landing/LandingContact";
 import { LandingFooter } from "@/features/landing/LandingFooter";
 import { LandingMobileHeaderWrapper } from "@/features/landing/LandingMobileHeaderWrapper";
@@ -33,11 +34,12 @@ export default function HomePage() {
           <LandingPhilosophy />
           <LandingFacilities />
           <LandingServices />
-          <LandingVideos />
           <LandingChallenge />
           <LandingPlans />
+          <LandingVideos />
           <LandingTestimonials />
           <LandingBranches />
+          <LandingStats />
           <LandingContact />
         </main>
         <LandingFooter />

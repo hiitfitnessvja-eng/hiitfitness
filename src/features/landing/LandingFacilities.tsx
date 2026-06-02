@@ -30,36 +30,40 @@ const facilities = [
 
 export function LandingFacilities() {
   return (
-    <section id="facilities" className="py-16 sm:py-24 px-4 sm:px-6 bg-stone-50 scroll-mt-[var(--header-height)]">
-      <AnimateOnScroll className="max-w-4xl mx-auto">
+    <section id="facilities" className="py-16 sm:py-10 px-4 sm:px-6 bg-stone-50 scroll-mt-[var(--header-height)]">
+      <AnimateOnScroll className="max-w-7xl mx-auto w-full">
         <div className="text-center mb-10 sm:mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#EE2A24] mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#FE0000] mb-4">
             Infrastructure that hits different
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 justify-items-center max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 sm:gap-12 md:gap-16 justify-items-center max-w-7xl mx-auto w-full px-4">
           {facilities.map((f) => (
-            <div key={f.title} className="w-full max-w-[280px] sm:max-w-xs">
+            <div key={f.title} className="w-full">
               <MobileInViewHover className="w-full p-2 md:p-0">
                 <article
-                  className="bg-white overflow-hidden rounded-xl shadow-md border border-red-100 transition-all duration-300 ease-out hover:scale-[1.04] hover:border-[#EE2A24] hover:shadow-xl"
+                  className="bg-white rounded-xl border border-stone-200 transition-all duration-300 ease-out hover:scale-[1.04] hover:border-[#FE0000] hover:shadow-2xl flex flex-col p-3 sm:p-4"
                 >
-                  <div className="relative aspect-[16/10] bg-stone-100">
-                    <Image
-                      src={f.imageSrc}
-                      alt={f.alt}
-                      fill
-                      className="object-cover"
-                      priority={false}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
+                  {/* Photo Frame Boundary */}
+                  <div className="relative bg-stone-950 p-2 sm:p-3 rounded-2xl border-2 border-stone-800 shadow-xl group">
+                    <div className="relative aspect-[16/10] rounded-xl overflow-hidden border border-stone-800/50">
+                      <Image
+                        src={f.imageSrc}
+                        alt={f.alt}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        priority={false}
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    </div>
                   </div>
-                  <div className="p-4 border-t border-stone-100">
-                    <h3 className="text-base font-bold text-black mb-1.5 leading-tight">
+                  
+                  <div className="pt-5 px-2 flex-1">
+                    <h3 className="text-xl font-bold text-[#FE0000] mb-3 uppercase tracking-wide">
                       {f.title}
                     </h3>
-                    <p className="text-stone-600 text-[11px] leading-relaxed">
+                    <p className="text-stone-600 md:text-black md:font-bold text-sm md:text-base leading-relaxed">
                       {f.description}
                     </p>
                   </div>

@@ -305,7 +305,7 @@ export function ServicesCarousel() {
             type="button"
             onClick={() => setActiveIndex(i)}
             className={`min-w-[44px] min-h-[44px] sm:min-w-0 sm:min-h-0 sm:w-2.5 sm:h-2.5 rounded-full flex items-center justify-center transition-all duration-200 ${i === activeIndex
-              ? "bg-[#EE2A24] scale-110 sm:scale-125 shadow-[0_0_0_2px_rgba(238,42,36,0.3)]"
+              ? "bg-[#FE0000] scale-110 sm:scale-125 shadow-[0_0_0_2px_rgba(238,42,36,0.3)]"
               : "bg-stone-300 hover:bg-stone-400 active:bg-stone-500"
               }`}
             aria-label={`Go to ${services[i].title}`}
@@ -452,7 +452,7 @@ function MobileGridCarousel({
               // Smooth shape / depth morph:
               "transition-[border-radius,box-shadow,border-color] duration-500 ease-out",
               isFeatured
-                ? "rounded-2xl shadow-[0_18px_40px_rgba(0,0,0,0.15)] border-[#EE2A24]/50"
+                ? "rounded-2xl shadow-[0_18px_40px_rgba(0,0,0,0.15)] border-[#FE0000]/50"
                 : "rounded-xl shadow-md hover:border-red-200",
               gridClass,
             ].join(" ")}
@@ -562,8 +562,8 @@ function MorphCard({
       className={`
         flex-shrink-0 flex overflow-hidden rounded-xl sm:rounded-2xl md:rounded-3xl
         bg-white border shadow-xl text-left
-        focus:outline-none focus:ring-2 focus:ring-[#EE2A24]/50 focus:ring-offset-2 focus:ring-offset-white
-        ${isActive ? "border-[#EE2A24]/40 shadow-[0_0_0_1px_rgba(238,42,36,0.2),0_24px_48px_rgba(0,0,0,0.1)]" : "border-stone-200"}
+        focus:outline-none focus:ring-2 focus:ring-[#FE0000]/50 focus:ring-offset-2 focus:ring-offset-white
+        ${isActive ? "border-[#FE0000]/40 shadow-[0_0_0_1px_rgba(238,42,36,0.2),0_24px_48px_rgba(0,0,0,0.1)]" : "border-stone-200"}
       `}
       style={{
         width: cardWidth,

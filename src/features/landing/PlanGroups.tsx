@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useCallback } from "react";
 import type { MembershipPlan } from "@/models/membership_plan";
 import {
   PLAN_CATEGORIES,
@@ -13,7 +13,7 @@ import { MobileInViewHover } from "@/components/ui/mobile-in-view-hover";
 import { useBranch } from "./BranchContext";
 
 const BRANCH_PHONES = {
-  kanuru: { display: "999 666 7714", tel: "tel:+919996667714" },
+  currency_nagar: { display: "999 666 7714", tel: "tel:+919996667714" },
   bhavanipuram: { display: "999 666 4188", tel: "tel:+919996664188" },
 };
 
@@ -63,24 +63,15 @@ type Props = { plans: MembershipPlan[] };
 export function PlanGroups({ plans }: Props) {
   const { selectedBranch } = useBranch();
   const contactPhone = BRANCH_PHONES[selectedBranch];
-  const [showCallPrompt, setShowCallPrompt] = useState(false);
   const grouped = groupPlans(plans);
   const categoriesToShow = PLAN_CATEGORIES.filter((c) => grouped[c].length > 0);
 
   const handleGetStarted = useCallback((e: React.MouseEvent) => {
     e.preventDefault();
-    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-    setShowCallPrompt(true);
-  }, []);
-
-  const handleCallNow = useCallback(() => {
-    setShowCallPrompt(false);
-    window.location.href = contactPhone.tel;
+    const phone = contactPhone.tel.replace("tel:+", "");
+    const message = "Hi HIIT Fitness, I'm interested in joining the gym!";
+    window.open(`https://wa.me/${phone}?text=${encodeURIComponent(message)}`, "_blank");
   }, [contactPhone.tel]);
-
-  const handleViewContact = useCallback(() => {
-    setShowCallPrompt(false);
-  }, []);
 
   return (
     <div
@@ -97,18 +88,18 @@ export function PlanGroups({ plans }: Props) {
           <div key={category} className="flex justify-center md:block w-full">
             <MobileInViewHover className="w-full max-w-md md:max-w-none h-full min-h-0 p-3 md:p-0">
               <article
-                className={`bg-white rounded-2xl overflow-hidden shadow-md flex flex-col h-full transition-all duration-300 ease-out border ${isPopular
-                    ? "border-[#EE2A24] md:-mt-2 md:mb-2 hover:scale-[1.04] hover:shadow-xl"
-                    : "border-stone-200 hover:scale-[1.04] hover:shadow-lg hover:border-red-300"
+                className={`bg-white rounded-2xl overflow-hidden   flex flex-col h-full transition-all duration-300 ease-out border ${isPopular
+                    ? "border-[#FE0000] md:-mt-2 md:mb-2 hover:scale-[1.04] hover:shadow-xl"
+                    : "border-stone-200 hover:scale-[1.04] hover:  hover:border-red-300"
                   }`}
               >
                 <div className="p-6 pb-4 border-b border-stone-100">
                   <div className="flex items-center justify-between gap-2">
-                    <h3 className="text-xl font-bold text-black uppercase tracking-tight">
+                    <h3 className="text-xl font-bold text-[#FE0000] mb-3 uppercase tracking-wide">
                       {label}
                     </h3>
                     {isPopular && (
-                      <span className="text-xs font-semibold tracking-wide uppercase px-2.5 py-1 rounded-full bg-red-100 text-[#EE2A24] border border-red-200">
+                      <span className="text-xs font-semibold tracking-wide uppercase px-2.5 py-1 rounded-full bg-red-100 text-[#FE0000] border border-red-200">
                         Popular
                       </span>
                     )}
@@ -117,7 +108,7 @@ export function PlanGroups({ plans }: Props) {
 
                 {/* Pricing table + features + button: flex-1 so button sits at bottom on desktop */}
                 <div className="p-6 pt-4 flex flex-col flex-1 min-h-0">
-                  <p className="text-xs font-semibold text-stone-500 uppercase tracking-wider mb-3">
+                  <p className="text-xl font-bold text-[#FE0000] mb-3 uppercase tracking-wide">
                     Pricing
                   </p>
                   <ul className="space-y-2 mb-6">
@@ -126,19 +117,19 @@ export function PlanGroups({ plans }: Props) {
                         key={plan.id}
                         className="flex items-center justify-between gap-3 py-2 border-b border-stone-100 last:border-0"
                       >
-                        <span className="text-stone-600 text-sm">{getDurationLabel(plan)}</span>
+                        <span className="text-stone-600 md:text-black md:font-bold text-sm md:text-base">{getDurationLabel(plan)}</span>
                         <span className="text-stone-900 font-semibold">{formatPrice(getTotalPrice(plan))}</span>
                       </li>
                     ))}
                   </ul>
 
                   {/* Feature list */}
-                  <p className="text-xs font-semibold text-stone-500 uppercase tracking-wider mb-3">
+                  <p className="text-xl font-bold text-[#FE0000] mb-3 uppercase tracking-wide">
                     What&apos;s included
                   </p>
                   <ul className="space-y-2.5 mb-6">
                     {features.map((feature) => (
-                      <li key={feature} className="flex items-start gap-2.5 text-sm text-stone-600">
+                      <li key={feature} className="flex items-start gap-2.5 text-sm md:text-base text-stone-600 md:text-black md:font-bold">
                         <CheckIcon />
                         <span>{feature}</span>
                       </li>
@@ -149,8 +140,8 @@ export function PlanGroups({ plans }: Props) {
                     type="button"
                     onClick={handleGetStarted}
                     className={`mt-auto block w-full text-center py-3 rounded-xl font-semibold text-sm transition ${isPopular
-                        ? "bg-[#EE2A24] text-white hover:bg-red-700"
-                        : "border border-stone-300 text-stone-700 hover:border-red-300 hover:text-[#EE2A24]"
+                        ? "bg-[#FE0000] text-white hover:bg-red-700"
+                        : "border border-stone-300 text-stone-700 hover:border-red-300 hover:text-[#FE0000]"
                       }`}
                   >
                     Get started
@@ -162,44 +153,6 @@ export function PlanGroups({ plans }: Props) {
         );
       })}
 
-      {/* Call / contact prompt when coming from Get started */}
-      {showCallPrompt && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-sm"
-          role="dialog"
-          aria-modal="true"
-          aria-labelledby="get-started-prompt-title"
-          onClick={() => setShowCallPrompt(false)}
-        >
-          <div
-            className="bg-white rounded-2xl border border-stone-200 p-6 max-w-sm w-full shadow-xl"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h3 id="get-started-prompt-title" className="text-lg font-bold text-stone-900 mb-2">
-              Get started
-            </h3>
-            <p className="text-stone-600 text-sm mb-4">
-              Call us now to join or ask about plans. You can also use the contact section below.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-2">
-              <a
-                href={contactPhone.tel}
-                onClick={handleCallNow}
-                className="flex-1 text-center py-3 rounded-xl font-semibold text-sm bg-[#EE2A24] text-white hover:bg-red-700 transition"
-              >
-                Call {contactPhone.display}
-              </a>
-              <button
-                type="button"
-                onClick={handleViewContact}
-                className="flex-1 py-3 rounded-xl font-semibold text-sm border border-stone-300 text-stone-700 hover:border-red-300 hover:text-[#EE2A24] transition"
-              >
-                View contact
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }

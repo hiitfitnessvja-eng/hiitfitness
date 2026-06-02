@@ -3,7 +3,7 @@
 import { useBranch } from "./BranchContext";
 
 const BRANCH_WHATSAPP = {
-  kanuru: "919996667714",
+  currency_nagar: "919996667714",
   bhavanipuram: "919996664188"
 };
 
@@ -24,7 +24,7 @@ export function FloatingWhatsApp() {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#1ebd5a] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(37,211,102,0.4)] flex items-center justify-center"
+                className="relative bg-[#25D366] text-white p-4 rounded-full hover:bg-[#1ebd5a] transition-all duration-300 hover:-translate-y-1 flex items-center justify-center"
                 aria-label="Chat on WhatsApp"
             >
                 {/* Pulsing ring animation */}

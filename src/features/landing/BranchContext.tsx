@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, ReactNode } from "react";
 
-export type BranchId = "kanuru" | "bhavanipuram";
+export type BranchId = "currency_nagar" | "bhavanipuram";
 
 type BranchContextType = {
   selectedBranch: BranchId;
@@ -10,7 +10,7 @@ type BranchContextType = {
 };
 
 const BranchContext = createContext<BranchContextType>({
-  selectedBranch: "kanuru",
+  selectedBranch: "currency_nagar",
   setSelectedBranch: () => {},
 });
 
@@ -19,7 +19,7 @@ export function useBranch() {
 }
 
 export function BranchProvider({ children }: { children: ReactNode }) {
-  const [selectedBranch, setSelectedBranch] = useState<BranchId>("kanuru");
+  const [selectedBranch, setSelectedBranch] = useState<BranchId>("currency_nagar");
 
   return (
     <BranchContext.Provider value={{ selectedBranch, setSelectedBranch }}>

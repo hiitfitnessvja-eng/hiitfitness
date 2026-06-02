@@ -25,8 +25,8 @@ const ClockIcon = () => (
 );
 
 const BRANCHES_DATA = {
-  kanuru: {
-    label: "HIIT FITNESS - KANURU",
+  currency_nagar: {
+    label: "HIIT FITNESS - CURRENCY NAGAR",
     address: "2nd Floor, Sri Anuja Balaji Square, vi Seshadri street, 3rd Ln, opp. Currency Nagar, Ramavarapadu, Kanuru, Andhra Pradesh 521108",
     phones: [
       { display: "999 666 7714", tel: "tel:+919996667714" },
@@ -64,62 +64,63 @@ export function LandingContact() {
   const googleMapsEmbedSrc = `https://maps.google.com/maps?q=${gym.lat},${gym.lng}&t=&z=15&ie=UTF8&iwloc=&output=embed`;
 
   return (
-    <section id="contact" className="py-16 sm:py-24 px-4 sm:px-6 scroll-mt-[var(--header-height)] bg-stone-50">
-      <AnimateOnScroll className="max-w-6xl mx-auto">
-        <div className="flex flex-col items-center max-w-4xl mx-auto w-full">
-          {/* Map Feature with switcher inside header */}
-          <div className="w-full min-w-0 flex justify-center">
-            <div className="bg-white rounded-3xl overflow-hidden w-full max-w-md lg:max-w-xl shadow border border-stone-200 h-full flex flex-col">
-              <div className="p-6 border-b border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div className="min-w-0 flex-1">
-                  <p className="text-[#EE2A24] font-extrabold text-xl uppercase">Visit the gym</p>
-                </div>
-                {/* Branch Switcher on the right side */}
-                <div className="flex bg-stone-100 p-1 rounded-xl border border-stone-200 shrink-0 self-start sm:self-auto">
-                  <button
-                    onClick={() => setSelectedBranch("kanuru")}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
-                      selectedBranch === "kanuru"
-                        ? "bg-[#EE2A24] text-white shadow-sm"
-                        : "text-stone-600 hover:text-stone-900"
-                    }`}
-                  >
-                    Currency Nagar branch
-                  </button>
-                  <button
-                    onClick={() => setSelectedBranch("bhavanipuram")}
-                    className={`px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-300 ${
-                      selectedBranch === "bhavanipuram"
-                        ? "bg-[#EE2A24] text-white shadow-sm"
-                        : "text-stone-600 hover:text-stone-900"
-                    }`}
-                  >
-                    Bhavanipuram
-                  </button>
-                </div>
-              </div>
-              <div className="relative flex-1 min-h-[400px]">
-                <iframe
-                  title={`${gym.label} Google Map`}
-                  src={googleMapsEmbedSrc}
-                  className="absolute inset-0 h-full w-full"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  style={{ border: 0 }}
-                />
-              </div>
-              <div className="p-6">
-                <Button asChild size="lg" className="w-full sm:w-auto bg-[#EE2A24] text-white hover:bg-red-700 font-semibold">
-                  <a
+    <section id="contact" className="w-full scroll-mt-[var(--header-height)] bg-stone-50 border-t border-stone-200">
+      <AnimateOnScroll className="w-full">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 flex flex-col sm:flex-row sm:items-center justify-between gap-6">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#FE0000] uppercase tracking-tight">Visit the gym</h2>
+            <p className="text-stone-500 font-semibold mt-1">Select a branch to see its location</p>
+          </div>
+          
+          {/* Branch Switcher */}
+          <div className="flex bg-white p-1.5 rounded-xl border border-stone-200 shadow-sm shrink-0 self-start sm:self-auto">
+            <button
+              onClick={() => setSelectedBranch("currency_nagar")}
+              className={`px-4 py-2 rounded-lg text-sm font-bold uppercase tracking-wider transition-all duration-300 ${
+                selectedBranch === "currency_nagar"
+                  ? "bg-[#FE0000] text-white shadow-md"
+                  : "text-stone-600 hover:text-stone-900 hover:bg-stone-50"
+              }`}
+            >
+              Kanuru
+            </button>
+            <button
+              onClick={() => setSelectedBranch("bhavanipuram")}
+              className={`px-4 py-2 rounded-lg text-sm font-bold uppercase tracking-wider transition-all duration-300 ${
+                selectedBranch === "bhavanipuram"
+                  ? "bg-[#FE0000] text-white shadow-md"
+                  : "text-stone-600 hover:text-stone-900 hover:bg-stone-50"
+              }`}
+            >
+              Bhavanipuram
+            </button>
+          </div>
+        </div>
+
+        {/* Full-width Map */}
+        <div className="w-full h-[50vh] md:h-[65vh] min-h-[400px] relative bg-stone-200 group">
+          <iframe
+            title={`${gym.label} Google Map`}
+            src={googleMapsEmbedSrc}
+            className="absolute inset-0 h-full w-full"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            style={{ border: 0 }}
+          />
+          {/* Floating Action Button */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 pointer-events-none w-full px-4 flex justify-center">
+            <div className="pointer-events-auto">
+                <Button asChild size="lg" className="rounded-full shadow-2xl bg-[#FE0000] text-white hover:bg-red-700 font-bold px-8 py-6 text-base group-hover:scale-105 transition-transform duration-300 border-4 border-white">
+                <a
                     href={gym.googleMapsDirectionsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                  >
+                    className="flex items-center gap-2"
+                >
                     <MapPinIcon />
-                    Get directions in Google Maps
-                  </a>
+                    Get Directions
+                </a>
                 </Button>
-              </div>
             </div>
           </div>
         </div>

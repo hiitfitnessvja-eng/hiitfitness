@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  /* Palette: black #000000 + red #EE2A24 */
+  /* Palette: black #000000 + red #FE0000 */
   --brand-black: #000000;
-  --brand-red: #EE2A24;
+  --brand-red: #FE0000;
   --bg: 0 0 0;
   --panel: 0 0 0;
   --text: 245 245 244; /* stone-100 / white-ish */
   --muted: 168 162 158; /* stone-400-ish */
-  --accent: 2 86% 54%; /* #EE2A24 in HSL */
+  --accent: 2 86% 54%; /* #FE0000 in HSL */
   --accent-2: 2 86% 44%;
   --accent-light: 2 86% 64%;
 

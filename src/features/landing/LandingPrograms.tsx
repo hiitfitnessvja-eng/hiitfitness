@@ -27,7 +27,7 @@ const programs = [
 
 export function LandingPrograms() {
     return (
-        <section id="programs" className="py-16 sm:py-24 px-4 sm:px-6 bg-[#EE2A24] scroll-mt-[var(--header-height)]">
+        <section id="programs" className="py-16 sm:py-10 px-4 sm:px-6 bg-[#FE0000] scroll-mt-[var(--header-height)]">
             <AnimateOnScroll className="max-w-4xl mx-auto">
                 <div className="text-center mb-10 sm:mb-16">
                     <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
@@ -43,7 +43,7 @@ export function LandingPrograms() {
                         <div key={p.title} className="w-full max-w-[280px] sm:max-w-xs">
                             <MobileInViewHover className="w-full p-2 md:p-0">
                                 <article
-                                    className="bg-black overflow-hidden rounded-xl shadow-md border border-stone-800 transition-all duration-300 ease-out hover:-translate-y-2 hover:border-white/20 hover:shadow-xl group"
+                                    className="bg-black overflow-hidden rounded-xl border border-stone-800 transition-all duration-300 ease-out hover:-translate-y-2 hover:border-white/20 hover:shadow-xl group"
                                 >
                                     <div className="relative aspect-[4/3] bg-stone-900 overflow-hidden">
                                         <Image

@@ -29,10 +29,10 @@ const coaches = [
 
 export function LandingCoaches() {
     return (
-        <section id="coaches" className="py-16 sm:py-24 px-4 sm:px-6 bg-stone-100 scroll-mt-[var(--header-height)]">
+        <section id="coaches" className="py-16 sm:py-10 px-4 sm:px-6 bg-stone-100 scroll-mt-[var(--header-height)]">
             <AnimateOnScroll className="max-w-6xl mx-auto">
                 <div className="text-center mb-10 sm:mb-16">
-                    <h2 className="text-3xl md:text-4xl font-extrabold text-[#EE2A24] mb-4">
+                    <h2 className="text-3xl md:text-4xl font-extrabold text-[#FE0000] mb-4">
                         Expert Coaches
                     </h2>
                     <p className="text-stone-700 max-w-2xl mx-auto font-medium">
@@ -44,7 +44,7 @@ export function LandingCoaches() {
                     {coaches.map((c) => (
                         <div key={c.name} className="flex justify-center w-full">
                             <MobileInViewHover className="w-full">
-                                <article className="bg-white overflow-hidden rounded-2xl shadow-sm border border-stone-200 text-center transition-all hover:border-[#EE2A24] hover:shadow-lg">
+                                <article className="bg-white overflow-hidden rounded-2xl shadow-sm border border-stone-200 text-center transition-all hover:border-[#FE0000] hover:">
                                     <div className="relative aspect-[3/4] bg-stone-200">
                                         <Image
                                             src={c.imageSrc}
@@ -54,10 +54,10 @@ export function LandingCoaches() {
                                         />
                                     </div>
                                     <div className="p-5">
-                                        <h3 className="text-lg font-bold text-black mb-1">
+                                        <h3 className="text-xl font-bold text-[#FE0000] mb-3 uppercase tracking-wide">
                                             {c.name}
                                         </h3>
-                                        <p className="text-sm font-semibold text-[#EE2A24]">
+                                        <p className="text-sm font-semibold text-[#FE0000]">
                                             {c.role}
                                         </p>
                                     </div>

@@ -7,7 +7,7 @@ import { useBranch, BranchId } from "./BranchContext";
 
 const BRANCHES = [
   {
-    id: "kanuru",
+    id: "currency_nagar",
     name: "Currency Nagar branch",
     address: "2nd Floor, Sri Anuja Balaji Square, Seshadri street, 3rd Ln, opp. Currency Nagar, Ramavarapadu, Andhra Pradesh 521108",
     phones: ["999 666 7714", "999 666 5573"],
@@ -38,10 +38,10 @@ export function LandingBranches() {
   const { selectedBranch, setSelectedBranch } = useBranch();
 
   return (
-    <section id="branches" className="py-16 sm:py-24 px-4 sm:px-6 bg-[#050505] scroll-mt-[var(--header-height)] border-t border-stone-800">
+    <section id="branches" className="py-16 sm:py-10 px-4 sm:px-6 bg-[#050505] scroll-mt-[var(--header-height)] border-t border-stone-800">
       <AnimateOnScroll className="max-w-6xl mx-auto">
         <div className="text-center mb-10 sm:mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-[#EE2A24] mb-4 uppercase tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-[#FE0000] mb-4 uppercase tracking-tight">
             Our Branches
           </h2>
         </div>
@@ -54,7 +54,7 @@ export function LandingBranches() {
                 key={branch.id}
                 onClick={() => setSelectedBranch(branch.id as BranchId)}
                 className={`group relative w-full bg-black border rounded-2xl overflow-hidden transition-all duration-300 flex flex-col sm:flex-row cursor-pointer ${isSelected
-                  ? "border-[#EE2A24] shadow-[0_0_30px_rgba(238,42,36,0.25)] opacity-100 scale-[1.01]"
+                  ? "border-[#FE0000]   opacity-100 scale-[1.01]"
                   : "border-stone-800 opacity-60 hover:opacity-90 hover:border-stone-700"
                   }`}
               >
@@ -69,10 +69,10 @@ export function LandingBranches() {
                   <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/70 to-transparent" />
                   <div className="absolute bottom-4 left-4 flex items-center gap-2">
                     <span className="flex h-3 w-3 relative">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#EE2A24] opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-3 w-3 bg-[#EE2A24]"></span>
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FE0000] opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-3 w-3 bg-[#FE0000]"></span>
                     </span>
-                    <span className="text-white text-[10px] font-bold tracking-widest uppercase shadow-black drop-shadow-md bg-black/50 px-2 py-0.5 rounded-sm">
+                    <span className="text-white text-[10px] font-bold tracking-widest uppercase shadow-black drop- bg-black/50 px-2 py-0.5 rounded-sm">
                       {branch.status}
                     </span>
                   </div>
@@ -88,18 +88,18 @@ export function LandingBranches() {
                       href={branch.googleMapsDirectionsUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-stone-500 hover:text-[#EE2A24] transition-colors p-2 bg-stone-900 rounded-full hover:bg-[#EE2A24]/10 border border-stone-800 hover:border-[#EE2A24]/50"
+                      className="text-stone-500 hover:text-[#FE0000] transition-colors p-2 bg-stone-900 rounded-full hover:bg-[#FE0000]/10 border border-stone-800 hover:border-[#FE0000]/50"
                       title="Get Directions"
                     >
                       <ExternalLink className="w-4 h-4" />
                     </a>
                   </div>
 
-                  <div className="w-12 h-1 bg-[#EE2A24] mb-6 rounded-full" />
+                  <div className="w-12 h-1 bg-[#FE0000] mb-6 rounded-full" />
 
                   <div className="space-y-4">
                     <div className="flex items-start gap-3 group/item">
-                      <div className="w-8 h-8 rounded-full bg-stone-900/50 border border-stone-800 flex items-center justify-center text-[#EE2A24] shrink-0 group-hover/item:bg-[#EE2A24]/10 transition-colors">
+                      <div className="w-8 h-8 rounded-full bg-stone-900/50 border border-stone-800 flex items-center justify-center text-[#FE0000] shrink-0 group-hover/item:bg-[#FE0000]/10 transition-colors">
                         <MapPin className="w-4 h-4" />
                       </div>
                       <div>
@@ -111,7 +111,7 @@ export function LandingBranches() {
                     </div>
 
                     <div className="flex items-start gap-3 group/item">
-                      <div className="w-8 h-8 rounded-full bg-stone-900/50 border border-stone-800 flex items-center justify-center text-[#EE2A24] shrink-0 group-hover/item:bg-[#EE2A24]/10 transition-colors">
+                      <div className="w-8 h-8 rounded-full bg-stone-900/50 border border-stone-800 flex items-center justify-center text-[#FE0000] shrink-0 group-hover/item:bg-[#FE0000]/10 transition-colors">
                         <Phone className="w-4 h-4" />
                       </div>
                       <div>
@@ -120,7 +120,7 @@ export function LandingBranches() {
                           <a
                             key={idx}
                             href={`tel:+91${phone.replace(/\s+/g, "")}`}
-                            className="block text-stone-300 hover:text-[#EE2A24] text-xs font-semibold transition-colors"
+                            className="block text-stone-300 hover:text-[#FE0000] text-xs font-semibold transition-colors"
                           >
                             {phone}
                           </a>
@@ -129,7 +129,7 @@ export function LandingBranches() {
                     </div>
 
                     <div className="flex items-start gap-3 group/item">
-                      <div className="w-8 h-8 rounded-full bg-stone-900/50 border border-stone-800 flex items-center justify-center text-[#EE2A24] shrink-0 group-hover/item:bg-[#EE2A24]/10 transition-colors">
+                      <div className="w-8 h-8 rounded-full bg-stone-900/50 border border-stone-800 flex items-center justify-center text-[#FE0000] shrink-0 group-hover/item:bg-[#FE0000]/10 transition-colors">
                         <Clock className="w-4 h-4" />
                       </div>
                       <div>
@@ -138,7 +138,7 @@ export function LandingBranches() {
                           Mon-Sat: <span className="font-normal text-stone-400">{branch.hours.weekdays}</span>
                         </p>
                         <p className="text-stone-300 text-xs font-semibold mt-0.5">
-                          Sun: <span className="font-normal text-[#EE2A24]">{branch.hours.sunday}</span>
+                          Sun: <span className="font-normal text-[#FE0000]">{branch.hours.sunday}</span>
                         </p>
                       </div>
                     </div>

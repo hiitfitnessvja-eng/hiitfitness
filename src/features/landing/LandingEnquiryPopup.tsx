@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useBranch } from "./BranchContext";
 
 const BRANCH_PHONES = {
-  kanuru: "+919996667714",
+  currency_nagar: "+919996667714",
   bhavanipuram: "+919996664188"
 };
 
@@ -29,8 +29,8 @@ export function LandingEnquiryPopup() {
 
     return (
         <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 p-4 transition-opacity duration-300">
-            <div className="relative w-full max-w-sm bg-white rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-300">
-                <div className="bg-[#EE2A24] px-6 py-4 flex items-center justify-between">
+            <div className="relative w-full max-w-sm bg-white rounded-2xl overflow-hidden animate-in fade-in zoom-in duration-300">
+                <div className="bg-[#FE0000] px-6 py-4 flex items-center justify-between">
                     <h2 className="text-xl font-bold text-white uppercase tracking-tight">Enquire Us</h2>
                     <button
                         onClick={() => setIsOpen(false)}
@@ -51,7 +51,7 @@ export function LandingEnquiryPopup() {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => setIsOpen(false)}
-                        className="w-full flex items-center justify-center gap-2 bg-[#25D366] text-white font-bold text-lg tracking-wide py-4 rounded-xl hover:bg-[#20bd5a] transition-all shadow-[0_4px_15px_rgba(37,211,102,0.3)] hover:-translate-y-1 hover:shadow-[0_6px_20px_rgba(37,211,102,0.4)]"
+                        className="w-full flex items-center justify-center gap-2 bg-[#25D366] text-white font-bold text-lg tracking-wide py-4 rounded-xl hover:bg-[#20bd5a] transition-all hover:-translate-y-1"
                     >
                         <MessageCircle className="w-6 h-6" />
                         ENQUIRY
