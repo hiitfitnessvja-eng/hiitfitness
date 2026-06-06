@@ -34,7 +34,7 @@ export function LandingEnquiryPopup() {
                     <h2 className="text-xl font-bold text-white uppercase tracking-tight">Enquire Us</h2>
                     <button
                         onClick={() => setIsOpen(false)}
-                        className="text-white/80 hover:text-white transition"
+                        className="text-white hover:text-white transition"
                         aria-label="Close popup"
                     >
                         <X className="w-6 h-6" />

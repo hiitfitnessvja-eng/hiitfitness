@@ -33,7 +33,7 @@ export function LandingPrograms() {
                     <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
                         Our Elite Programs
                     </h2>
-                    <p className="text-white/80 max-w-2xl mx-auto font-medium">
+                    <p className="text-white max-w-2xl mx-auto font-medium">
                         Designed for those who demand excellence. Find the right path to forge your strength.
                     </p>
                 </div>
@@ -58,7 +58,7 @@ export function LandingPrograms() {
                                         <h3 className="text-base font-bold text-white mb-1.5">
                                             {p.title}
                                         </h3>
-                                        <p className="text-stone-300 text-[11px] leading-relaxed">
+                                        <p className="text-white text-[11px] leading-relaxed">
                                             {p.description}
                                         </p>
                                     </div>

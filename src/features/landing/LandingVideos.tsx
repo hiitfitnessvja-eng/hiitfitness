@@ -62,7 +62,7 @@ function VideoCard({ vid, onClick }: { vid: typeof videos[0]; onClick: () => voi
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent sm:from-black/80 sm:via-transparent sm:to-black/20 z-20 pointer-events-none opacity-100 transition-opacity duration-300" />
 
             <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-6 z-30 translate-y-0 transition-all duration-300 pointer-events-none">
-                <p className="text-white font-bold text-xs sm:text-lg leading-tight drop-">
+                <p className="text-white font-bold text-xs sm:text-lg leading-tight drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">
                     {vid.title}
                 </p>
             </div>

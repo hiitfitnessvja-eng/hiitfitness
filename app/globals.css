@@ -80,7 +80,7 @@ body {
     }
   }
   .animate-marquee {
-    animation: marquee 35s linear infinite;
+    animation: marquee 28s linear infinite;
   }
   /* Pause marquee while user is scrolling so loop stays seamless */
   .marquee-container.marquee-paused .animate-marquee {
@@ -109,12 +109,12 @@ body {
   /* Scroll-into-view ease-in pop */
   .animate-in-scroll-placeholder {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    transform: translateY(40px) scale(0.9);
+    transition: opacity 1s cubic-bezier(0.34, 1.56, 0.64, 1), transform 1s cubic-bezier(0.34, 1.56, 0.64, 1);
   }
   .animate-in-scroll-visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
   }
 
   /* Small boom at end-lap icon when scroll reaches end (silent) */

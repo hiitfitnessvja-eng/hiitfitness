@@ -59,7 +59,7 @@ export function LandingNav() {
   const linkClass = (id: string) =>
     [
       "text-sm md:text-base font-semibold transition relative",
-      active === id ? "text-white" : "text-white/80 hover:text-white",
+      active === id ? "text-white" : "text-white hover:text-white",
     ].join(" ");
 
   return (
@@ -70,10 +70,10 @@ export function LandingNav() {
       >
       <nav className="max-w-6xl mx-auto px-3 sm:px-6 flex items-center justify-between h-[var(--header-height)] gap-2 min-h-0">
         <Link href="/" className="flex items-center gap-2 sm:gap-3 tracking-tight min-w-0 flex-1 sm:flex-initial" aria-label="HIIT Fitness – High intensity interval training">
-          <Image src="/images/99558_FLAT_JP_AC_03-nobg-cropped.svg" alt="" width={80} height={80} className="h-12 w-12 min-h-12 min-w-12 sm:h-14 sm:w-14 md:h-20 md:w-20 shrink-0 object-contain" aria-hidden />
+          <Image src="/images/99558_FLAT_JP_AC_03-nobg-cropped.svg" alt="" width={64} height={64} className="h-10 w-10 min-h-10 min-w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 shrink-0 object-contain" aria-hidden />
           <span className="flex flex-col justify-center leading-tight text-center min-w-0 flex-1 overflow-visible">
-            <span className="font-display text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold uppercase text-white tracking-tight drop-">HIIT FITNESS</span>
-            <span className="font-sans text-xs sm:text-sm lg:text-base font-bold uppercase text-brand-red tracking-tight mt-0.5 sm:mt-1 whitespace-nowrap drop-">HIGH INTENSITY INTERVAL TRAINING</span>
+            <span className="font-display text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold uppercase text-white tracking-tight drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">HIIT FITNESS</span>
+            <span className="font-sans text-[10px] sm:text-xs lg:text-sm font-bold uppercase text-brand-red tracking-tight mt-0.5 sm:mt-1 whitespace-nowrap drop-shadow-[0_0_10px_rgba(254,0,0,0.5)]">HIGH INTENSITY INTERVAL TRAINING</span>
           </span>
         </Link>
         {/* Desktop */}
@@ -88,24 +88,24 @@ export function LandingNav() {
           ))}
 
 
-          <div className="flex items-center gap-4 ml-6 pl-6 border-l border-stone-800">
+          <div className="flex items-center gap-5 ml-6 pl-6 border-l border-stone-800">
             <a
               href="https://www.instagram.com/hiitfitness01?igsh=MWt5Y29ueXM5bDMwcw=="
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/80 hover:text-[#FE0000] transition-colors"
+              className="transition-transform hover:scale-110 drop-shadow-md"
               aria-label="Instagram"
             >
-              <Instagram className="w-5 h-5" />
+              <Image src="/images/instagram.svg" alt="Instagram" width={28} height={28} className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
             </a>
             <a
               href="https://youtube.com/@hiit_fitness?si=P0vvcx4SiFozU5QH"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/80 hover:text-[#FE0000] transition-colors"
+              className="transition-transform hover:scale-110 drop-shadow-md"
               aria-label="YouTube"
             >
-              <Youtube className="w-5 h-5" />
+              <Image src="/images/youtube.svg" alt="YouTube" width={36} height={26} className="w-9 h-7 sm:w-10 sm:h-8 object-contain" />
             </a>
           </div>
         </div>
@@ -140,7 +140,7 @@ export function LandingNav() {
                   "flex items-center justify-between rounded-xl px-3 py-2 text-base font-semibold transition",
                   active === s.id
                     ? "bg-stone-800/50 text-white border border-stone-700"
-                    : "text-white/80 hover:bg-stone-800/30",
+                    : "text-white hover:bg-stone-800/30",
                 ].join(" ")}
               >
                 {s.label}
@@ -156,18 +156,18 @@ export function LandingNav() {
                 href="https://www.instagram.com/hiitfitness01?igsh=MWt5Y29ueXM5bDMwcw=="
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-white/80 hover:text-[#FE0000] transition-colors"
+                className="flex items-center gap-3 text-white transition-transform hover:scale-105"
               >
-                <Instagram className="w-6 h-6" />
+                <Image src="/images/instagram.svg" alt="Instagram" width={32} height={32} className="w-8 h-8 object-contain" />
                 <span className="font-semibold">Instagram</span>
               </a>
               <a
                 href="https://youtube.com/@hiit_fitness?si=P0vvcx4SiFozU5QH"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-white/80 hover:text-[#FE0000] transition-colors"
+                className="flex items-center gap-3 text-white transition-transform hover:scale-105"
               >
-                <Youtube className="w-6 h-6" />
+                <Image src="/images/youtube.svg" alt="YouTube" width={40} height={28} className="w-10 h-7 object-contain" />
                 <span className="font-semibold">YouTube</span>
               </a>
             </div>

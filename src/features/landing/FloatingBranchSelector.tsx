@@ -54,7 +54,7 @@ export function FloatingBranchSelector() {
           : "bottom-6 left-0 pl-3 pr-1.5 hover:pl-4"
       }`}
     >
-      <div className="flex items-center gap-1 pl-2 pr-1 text-stone-400">
+      <div className="flex items-center gap-1 pl-2 pr-1 text-white">
         <MapPin className="w-3.5 h-3.5 text-[#FE0000] animate-pulse" />
         <span className="text-[9px] font-bold tracking-widest uppercase hidden md:inline">Branch:</span>
       </div>
@@ -63,7 +63,7 @@ export function FloatingBranchSelector() {
         className={`px-2 py-1.5 rounded-lg text-[9px] sm:text-[10px] font-bold uppercase tracking-wider transition-all duration-300 ${
           selectedBranch === "currency_nagar"
             ? "bg-[#FE0000] text-white    /30"
-            : "text-stone-400 hover:text-white hover:bg-stone-900"
+            : "text-white hover:text-white hover:bg-stone-900"
         }`}
       >
         Currency Nagar
@@ -73,7 +73,7 @@ export function FloatingBranchSelector() {
         className={`px-2 py-1.5 rounded-lg text-[9px] sm:text-[10px] font-bold uppercase tracking-wider transition-all duration-300 ${
           selectedBranch === "bhavanipuram"
             ? "bg-[#FE0000] text-white    /30"
-            : "text-stone-400 hover:text-white hover:bg-stone-900"
+            : "text-white hover:text-white hover:bg-stone-900"
         }`}
       >
         Bhavanipuram

@@ -72,7 +72,7 @@ export function LandingBranches() {
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FE0000] opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-3 w-3 bg-[#FE0000]"></span>
                     </span>
-                    <span className="text-white text-[10px] font-bold tracking-widest uppercase shadow-black drop- bg-black/50 px-2 py-0.5 rounded-sm">
+                    <span className="text-white text-[10px] font-bold tracking-widest uppercase shadow-black drop-shadow-md bg-black/50 px-2 py-0.5 rounded-sm">
                       {branch.status}
                     </span>
                   </div>
@@ -103,8 +103,8 @@ export function LandingBranches() {
                         <MapPin className="w-4 h-4" />
                       </div>
                       <div>
-                        <h4 className="text-white text-[9px] font-bold uppercase tracking-widest mb-0.5 opacity-60">Address</h4>
-                        <p className="text-stone-300 text-xs leading-relaxed">
+                        <h4 className="text-white text-[9px] font-bold uppercase tracking-widest mb-0.5">Address</h4>
+                        <p className="text-white text-xs leading-relaxed">
                           {branch.address}
                         </p>
                       </div>
@@ -115,12 +115,12 @@ export function LandingBranches() {
                         <Phone className="w-4 h-4" />
                       </div>
                       <div>
-                        <h4 className="text-white text-[9px] font-bold uppercase tracking-widest mb-0.5 opacity-60">Contact</h4>
+                        <h4 className="text-white text-[9px] font-bold uppercase tracking-widest mb-0.5">Contact</h4>
                         {branch.phones.map((phone, idx) => (
                           <a
                             key={idx}
                             href={`tel:+91${phone.replace(/\s+/g, "")}`}
-                            className="block text-stone-300 hover:text-[#FE0000] text-xs font-semibold transition-colors"
+                            className="block text-white hover:text-[#FE0000] text-xs font-semibold transition-colors"
                           >
                             {phone}
                           </a>
@@ -133,11 +133,11 @@ export function LandingBranches() {
                         <Clock className="w-4 h-4" />
                       </div>
                       <div>
-                        <h4 className="text-white text-[9px] font-bold uppercase tracking-widest mb-0.5 opacity-60">Hours</h4>
-                        <p className="text-stone-300 text-xs font-semibold">
-                          Mon-Sat: <span className="font-normal text-stone-400">{branch.hours.weekdays}</span>
+                        <h4 className="text-white text-[9px] font-bold uppercase tracking-widest mb-0.5">Hours</h4>
+                        <p className="text-white text-xs font-semibold">
+                          Mon-Sat: <span className="font-normal text-white">{branch.hours.weekdays}</span>
                         </p>
-                        <p className="text-stone-300 text-xs font-semibold mt-0.5">
+                        <p className="text-white text-xs font-semibold mt-0.5">
                           Sun: <span className="font-normal text-[#FE0000]">{branch.hours.sunday}</span>
                         </p>
                       </div>

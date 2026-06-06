@@ -38,12 +38,12 @@ function formatPrice(amount: number) {
 
 function getDurationLabel(plan: MembershipPlan): string {
   const months = plan.duration_days / 30;
-  if (months >= 12) return "12 months";
-  if (months >= 6) return "6 months";
-  if (months >= 3) return "3 months";
+  if (months >= 12) return "12 Months";
+  if (months >= 6) return "6 Months";
+  if (months >= 3) return "3 Months";
   if (plan.name.includes("Functional")) return "Functional classes";
   if (plan.name.includes("Group")) return "Group (3 members)";
-  return "1 month";
+  return "1 Month";
 }
 
 function getTotalPrice(plan: MembershipPlan): number {
@@ -78,14 +78,21 @@ export function PlanGroups({ plans }: Props) {
       className={`grid gap-6 sm:gap-8 items-stretch justify-items-center md:justify-items-stretch ${categoriesToShow.length === 1 ? "max-w-md mx-auto" : categoriesToShow.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3"
         }`}
     >
-      {categoriesToShow.map((category) => {
+      {categoriesToShow.map((category, i) => {
         const items = grouped[category];
         const label = PLAN_GROUP_LABELS[category];
         const features = PLAN_GROUP_FEATURES[category];
         const isPopular = category === "PT";
+        
+        const isThreeCols = categoriesToShow.length === 3;
+        const xOffset = isThreeCols ? (i === 0 ? "100%" : i === 2 ? "-100%" : "0") : "0";
 
         return (
-          <div key={category} className="flex justify-center md:block w-full">
+          <div 
+            key={category} 
+            className="flex justify-center md:block w-full plan-card"
+            style={{ '--x-offset': xOffset, '--delay': `${i * 150}ms` } as React.CSSProperties}
+          >
             <MobileInViewHover className="w-full max-w-md md:max-w-none h-full min-h-0 p-3 md:p-0">
               <article
                 className={`bg-white rounded-2xl overflow-hidden   flex flex-col h-full transition-all duration-300 ease-out border ${isPopular
@@ -118,7 +125,12 @@ export function PlanGroups({ plans }: Props) {
                         className="flex items-center justify-between gap-3 py-2 border-b border-stone-100 last:border-0"
                       >
                         <span className="text-stone-600 md:text-black md:font-bold text-sm md:text-base">{getDurationLabel(plan)}</span>
-                        <span className="text-stone-900 font-semibold">{formatPrice(getTotalPrice(plan))}</span>
+                        <span className="text-stone-900 font-semibold flex items-center gap-2">
+                          {plan.original_fee && (
+                            <span className="line-through decoration-[#FE0000] decoration-2 font-bold text-black text-xs sm:text-sm opacity-60">{formatPrice(plan.original_fee)}</span>
+                          )}
+                          {formatPrice(getTotalPrice(plan))}
+                        </span>
                       </li>
                     ))}
                   </ul>

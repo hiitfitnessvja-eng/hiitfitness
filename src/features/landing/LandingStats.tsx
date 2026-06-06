@@ -5,7 +5,7 @@ import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 
 const stats = [
     { num: 2, suffix: "", label: "CENTERS" },
-    { num: 15, suffix: "+", label: "TRAINERS" },
+    { num: 20, suffix: "+", label: "TRAINERS" },
     { num: 10, suffix: "K+", label: "MEMBERS" },
 ];
 
@@ -75,7 +75,7 @@ export function LandingStats() {
                                 <CountUp end={stat.num} suffix={stat.suffix} />
                             </div>
 
-                            <div className="text-[10px] sm:text-xs font-bold text-stone-400 uppercase tracking-[0.2em]">
+                            <div className="text-[10px] sm:text-xs font-bold text-white uppercase tracking-[0.2em]">
                                 {stat.label}
                             </div>
                         </div>

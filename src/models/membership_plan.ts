@@ -6,6 +6,8 @@ export type MembershipPlan = {
   duration_days: number;
   /** Exact total fee for display (avoids rounding drift from price_monthly × months) */
   total_fee?: number;
+  /** Original total fee to show struck-out discount */
+  original_fee?: number;
   is_active: boolean;
   created_at: string;
   updated_at: string;

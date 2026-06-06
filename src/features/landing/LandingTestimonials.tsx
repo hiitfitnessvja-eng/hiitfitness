@@ -61,7 +61,7 @@ export function LandingTestimonials() {
                                 <span className="text-6xl text-[#FE0000] opacity-30 font-serif leading-none absolute top-4 left-4 select-none">
                                     &ldquo;
                                 </span>
-                                <p className="text-stone-300 text-sm sm:text-base italic mb-6 relative z-10 leading-relaxed font-medium mt-6">
+                                <p className="text-white text-sm sm:text-base italic mb-6 relative z-10 leading-relaxed font-medium mt-6">
                                     {t.review}
                                 </p>
                             </div>

@@ -82,7 +82,7 @@ export function LandingContact() {
                   : "text-stone-600 hover:text-stone-900 hover:bg-stone-50"
               }`}
             >
-              Kanuru
+              Currency Nagar
             </button>
             <button
               onClick={() => setSelectedBranch("bhavanipuram")}

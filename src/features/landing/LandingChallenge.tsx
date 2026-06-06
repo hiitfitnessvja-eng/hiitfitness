@@ -11,11 +11,11 @@ export function LandingChallenge() {
             />
 
             <AnimateOnScroll className="max-w-4xl mx-auto relative z-10 text-center">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#FE0000] mb-6 drop-">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#FE0000] mb-6 drop-shadow-[0_0_15px_rgba(254,0,0,0.5)]">
                     7-Day Intensive Challenge
                 </h2>
 
-                <p className="text-stone-300 text-lg sm:text-xl leading-relaxed mb-8 font-medium">
+                <p className="text-white text-lg sm:text-xl leading-relaxed mb-8 font-medium">
                     Daily 90-minute sessions, custom nutrition planning, body composition analysis, and exclusive gear. Break your limits and redefine what you thought was possible.
                 </p>
 
