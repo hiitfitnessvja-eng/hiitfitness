@@ -14,7 +14,7 @@ const videos = [
     {
         id: "v2",
         title: "Client Workout 1",
-        src: "/videos/v2.mp4"
+        src: "/videos/v4.mp4"
     },
     {
         id: "v3",
@@ -24,7 +24,7 @@ const videos = [
     {
         id: "v4",
         title: "Client Workout 3",
-        src: "/videos/v4.mp4"
+        src: "/videos/v2.mp4"
     },
     {
         id: "v5",
