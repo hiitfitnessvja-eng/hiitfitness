@@ -31,12 +31,12 @@ export default function HomePage() {
         <LandingEnquiryPopup />
         <main>
           <LandingHero />
+          <LandingVideos />
           <LandingPhilosophy />
           <LandingFacilities />
           <LandingServices />
           <LandingChallenge />
           <LandingPlans />
-          <LandingVideos />
           <LandingTestimonials />
           <LandingBranches />
           <LandingStats />

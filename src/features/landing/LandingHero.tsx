@@ -50,39 +50,40 @@ export function LandingHero() {
   }, []);
 
   return (
-    <section className="relative min-h-[80dvh] flex items-end justify-center px-4 sm:px-6 pb-20 md:pb-20 pt-[calc(var(--header-height)+var(--header-content-gap)+3.25rem)] md:pt-[calc(var(--header-height)+var(--header-content-gap))] overflow-hidden bg-black text-center">
+    <section className="relative overflow-hidden bg-black text-center pt-[calc(var(--header-height)+var(--header-content-gap)+1rem)] md:pt-[calc(var(--header-height)+var(--header-content-gap))]">
       {/* Background Images Manual + Auto Slider */}
-      <div className="absolute inset-0 z-0 bg-black">
+      <div className="relative z-0 bg-black w-full h-[70vh] md:h-[80vh]">
         <div 
           ref={scrollContainerRef}
-          className="flex h-full w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide py-4 md:py-8 items-center scroll-smooth"
+          className="flex h-full w-full overflow-x-auto snap-x snap-mandatory scrollbar-hide py-0 sm:py-4 md:py-8 items-center scroll-smooth"
         >
           {/* We use 3 sets to ensure plenty of swiping room before hitting the end */}
           {[...BACKGROUND_IMAGES, ...BACKGROUND_IMAGES, ...BACKGROUND_IMAGES].map((img, idx) => (
             <div 
               key={`${img}-${idx}`} 
-              className="w-[90vw] sm:w-[45vw] md:w-[33.333vw] h-[60vh] md:h-[70vh] p-2 md:p-4 flex-shrink-0 snap-center cursor-pointer"
+              className="w-[100vw] sm:w-[50vw] md:w-[33.333vw] h-full sm:h-[70vh] md:h-[80vh] p-0 sm:px-2 md:px-3 flex-shrink-0 snap-center cursor-pointer"
               onClick={() => {
                 setCurrentIdx(idx % BACKGROUND_IMAGES.length);
                 setIsGalleryOpen(true);
               }}
             >
-              <div className="w-full h-full relative rounded-2xl overflow-hidden shadow-2xl transition-transform hover:scale-[1.02]">
+              <div className="w-full h-full relative sm:rounded-2xl overflow-hidden sm:shadow-2xl transition-transform hover:scale-[1.02]">
                 <Image
                   src={img}
                   alt="Background gallery image"
                   fill
-                  className="object-contain drop-shadow-2xl"
+                  className="object-cover sm:object-contain drop-shadow-2xl"
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                  quality={100}
+                  unoptimized
                 />
               </div>
             </div>
           ))}
         </div>
       </div>
-      <div className="absolute inset-0 z-[1] bg-black/30 pointer-events-none" />
 
-      <AnimateOnScroll rootMargin="0px 0px -20px 0px" className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center justify-center pt-10 md:pt-0">
+      <AnimateOnScroll rootMargin="0px 0px -20px 0px" className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center justify-center py-10 md:py-16 px-4 sm:px-6">
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center w-full max-w-2xl mx-auto flex-wrap">
           <Link
             href={`https://wa.me/${waNumber}?text=Hi!%20I'm%20interested%20in%20joining%20the%20community%20at%20HIIT%20Fitness.`}
@@ -153,6 +154,8 @@ export function LandingHero() {
                  className="object-contain drop-shadow-2xl"
                  priority
                  sizes="100vw"
+                 quality={100}
+                 unoptimized
               />
             </div>
 

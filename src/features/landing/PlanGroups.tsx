@@ -125,9 +125,9 @@ export function PlanGroups({ plans }: Props) {
                         className="flex items-center justify-between gap-3 py-2 border-b border-stone-100 last:border-0"
                       >
                         <span className="text-stone-600 md:text-black md:font-bold text-sm md:text-base">{getDurationLabel(plan)}</span>
-                        <span className="text-stone-900 font-semibold flex items-center gap-2">
+                        <span className="text-black font-bold flex items-center gap-2">
                           {plan.original_fee && (
-                            <span className="line-through decoration-[#FE0000] decoration-2 font-bold text-black text-xs sm:text-sm opacity-60">{formatPrice(plan.original_fee)}</span>
+                            <span className="line-through decoration-[#FE0000] decoration-2 font-bold text-black">{formatPrice(plan.original_fee)}</span>
                           )}
                           {formatPrice(getTotalPrice(plan))}
                         </span>

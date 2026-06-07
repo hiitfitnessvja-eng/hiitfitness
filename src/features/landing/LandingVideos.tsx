@@ -135,7 +135,7 @@ export function LandingVideos() {
                         </h2>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 lg:gap-8 max-w-[280px] min-[400px]:max-w-[340px] sm:max-w-none mx-auto">
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6 lg:gap-8 w-full sm:max-w-none mx-auto">
                         {videos.map((vid) => (
                             <VideoCard key={vid.id} vid={vid} onClick={() => setActiveVideo(vid.id)} />
                         ))}

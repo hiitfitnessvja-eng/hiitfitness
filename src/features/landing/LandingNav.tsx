@@ -70,10 +70,10 @@ export function LandingNav() {
       >
       <nav className="max-w-6xl mx-auto px-3 sm:px-6 flex items-center justify-between h-[var(--header-height)] gap-2 min-h-0">
         <Link href="/" className="flex items-center gap-2 sm:gap-3 tracking-tight min-w-0 flex-1 sm:flex-initial" aria-label="HIIT Fitness – High intensity interval training">
-          <Image src="/images/99558_FLAT_JP_AC_03-nobg-cropped.svg" alt="" width={64} height={64} className="h-10 w-10 min-h-10 min-w-10 sm:h-12 sm:w-12 md:h-16 md:w-16 shrink-0 object-contain" aria-hidden />
+          <Image src="/images/99558_FLAT_JP_AC_03-nobg-cropped.svg" alt="" width={80} height={80} className="h-12 w-12 min-h-12 min-w-12 sm:h-14 sm:w-14 md:h-20 md:w-20 shrink-0 object-contain" aria-hidden />
           <span className="flex flex-col justify-center leading-tight text-center min-w-0 flex-1 overflow-visible">
             <span className="font-display text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold uppercase text-white tracking-tight drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">HIIT FITNESS</span>
-            <span className="font-sans text-[10px] sm:text-xs lg:text-sm font-bold uppercase text-brand-red tracking-tight mt-0.5 sm:mt-1 whitespace-nowrap drop-shadow-[0_0_10px_rgba(254,0,0,0.5)]">HIGH INTENSITY INTERVAL TRAINING</span>
+            <span className="font-sans text-xs sm:text-sm lg:text-base font-black uppercase text-brand-red tracking-tight mt-0.5 sm:mt-1 whitespace-nowrap drop-shadow-[0_0_10px_rgba(254,0,0,0.5)]">HIGH INTENSITY INTERVAL TRAINING</span>
           </span>
         </Link>
         {/* Desktop */}
