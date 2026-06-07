@@ -124,7 +124,7 @@ export function PlanGroups({ plans }: Props) {
                         key={plan.id}
                         className="flex items-center justify-between gap-3 py-2 border-b border-stone-100 last:border-0"
                       >
-                        <span className="text-stone-600 md:text-black md:font-bold text-sm md:text-base">{getDurationLabel(plan)}</span>
+                        <span className="text-black font-bold text-sm md:text-base">{getDurationLabel(plan)}</span>
                         <span className="text-black font-bold flex items-center gap-2">
                           {plan.original_fee && (
                             <span className="line-through decoration-[#FE0000] decoration-2 font-bold text-black">{formatPrice(plan.original_fee)}</span>
@@ -141,7 +141,7 @@ export function PlanGroups({ plans }: Props) {
                   </p>
                   <ul className="space-y-2.5 mb-6">
                     {features.map((feature) => (
-                      <li key={feature} className="flex items-start gap-2.5 text-sm md:text-base text-stone-600 md:text-black md:font-bold">
+                      <li key={feature} className="flex items-start gap-2.5 text-sm md:text-base text-black font-bold">
                         <CheckIcon />
                         <span>{feature}</span>
                       </li>

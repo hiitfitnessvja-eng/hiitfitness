@@ -35,7 +35,7 @@ export function LandingCoaches() {
                     <h2 className="text-3xl md:text-4xl font-extrabold text-[#FE0000] mb-4">
                         Expert Coaches
                     </h2>
-                    <p className="text-stone-700 max-w-2xl mx-auto font-medium">
+                    <p className="text-black max-w-2xl mx-auto font-bold">
                         Train with the elite. Our coaching staff applies the latest sports science and methodology.
                     </p>
                 </div>

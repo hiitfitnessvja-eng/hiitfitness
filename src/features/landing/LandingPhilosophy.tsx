@@ -54,7 +54,7 @@ export function LandingPhilosophy() {
                             <h3 className="text-xl font-bold text-[#FE0000] mb-3 uppercase tracking-wide">
                                 {v.title}
                             </h3>
-                            <p className="text-stone-600 md:text-black font-medium md:font-bold text-sm md:text-base leading-relaxed">
+                            <p className="text-black font-bold text-sm md:text-base leading-relaxed">
                                 {v.description}
                             </p>
                         </div>

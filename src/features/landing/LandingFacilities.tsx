@@ -70,7 +70,7 @@ export function LandingFacilities() {
                     <h3 className="text-xl font-bold text-[#FE0000] mb-3 uppercase tracking-wide">
                       {f.title}
                     </h3>
-                    <p className="text-stone-600 md:text-black md:font-bold text-sm md:text-base leading-relaxed flex-1">
+                    <p className="text-black font-bold text-sm md:text-base leading-relaxed flex-1">
                       {f.description}
                     </p>
                   </div>
