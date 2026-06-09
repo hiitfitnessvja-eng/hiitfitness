@@ -36,36 +36,48 @@ export function FloatingBranchSelector() {
     };
   }, []);
 
-  const mobileTopStyle = undefined;
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div
-      className="z-50 flex items-center gap-1 bg-black/90 backdrop-blur-md border border-stone-800 p-1 hover:border-stone-700 transition-all duration-300 fixed rounded-r-xl rounded-l-none border-l-0 bottom-24 md:bottom-28 left-0 pl-2 pr-3 md:pl-3 md:pr-1.5 hover:pl-4"
+      className="z-50 flex items-center bg-black/90 backdrop-blur-md border border-stone-800 p-1 hover:border-stone-700 transition-all duration-300 fixed rounded-r-xl rounded-l-none border-l-0 bottom-9 left-0 pl-1 pr-2 py-1.5 shadow-2xl"
     >
-      <div className="flex items-center gap-1 pl-2 pr-1 text-white">
-        <MapPin className="w-3.5 h-3.5 text-[#FE0000] animate-pulse" />
-        <span className="text-xs font-bold tracking-widest uppercase hidden md:inline">Branch:</span>
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center gap-2 px-2 py-1 text-white hover:text-[#FE0000] transition-colors"
+      >
+        <MapPin className={`w-4 h-4 text-[#FE0000] ${!isOpen ? "animate-pulse" : ""}`} />
+        <span className="text-[10px] sm:text-xs font-bold tracking-widest uppercase whitespace-nowrap">
+          {isOpen ? "Close" : (selectedBranch === "currency_nagar" ? "Currency Nagar" : "Bhavanipuram")}
+        </span>
+      </button>
+
+      <div 
+        className={`flex items-center overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? "max-w-[400px] opacity-100 ml-1 gap-1" : "max-w-0 opacity-0 ml-0 gap-0"
+        }`}
+      >
+        <button
+          onClick={() => { setSelectedBranch("currency_nagar"); setIsOpen(false); }}
+          className={`px-3 py-1.5 rounded-lg text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-300 whitespace-nowrap ${
+            selectedBranch === "currency_nagar"
+              ? "bg-[#FE0000] text-white"
+              : "text-stone-300 hover:text-white hover:bg-stone-800"
+          }`}
+        >
+          Currency Nagar
+        </button>
+        <button
+          onClick={() => { setSelectedBranch("bhavanipuram"); setIsOpen(false); }}
+          className={`px-3 py-1.5 rounded-lg text-[10px] sm:text-xs font-bold uppercase tracking-wider transition-all duration-300 whitespace-nowrap ${
+            selectedBranch === "bhavanipuram"
+              ? "bg-[#FE0000] text-white"
+              : "text-stone-300 hover:text-white hover:bg-stone-800"
+          }`}
+        >
+          Bhavanipuram
+        </button>
       </div>
-      <button
-        onClick={() => setSelectedBranch("currency_nagar")}
-        className={`px-3 py-2 rounded-lg text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-300 ${
-          selectedBranch === "currency_nagar"
-            ? "bg-[#FE0000] text-white    /30"
-            : "text-white hover:text-white hover:bg-stone-900"
-        }`}
-      >
-        Currency Nagar
-      </button>
-      <button
-        onClick={() => setSelectedBranch("bhavanipuram")}
-        className={`px-3 py-2 rounded-lg text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-300 ${
-          selectedBranch === "bhavanipuram"
-            ? "bg-[#FE0000] text-white    /30"
-            : "text-white hover:text-white hover:bg-stone-900"
-        }`}
-      >
-        Bhavanipuram
-      </button>
     </div>
   );
 }

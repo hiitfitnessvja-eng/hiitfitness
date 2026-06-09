@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { AnimateOnScroll } from "@/components/ui/animate-on-scroll";
 
 const stats = [
-    { num: 2, suffix: "", label: "CENTERS" },
+    { num: 2, suffix: "", label: "BRANCHES" },
     { num: 20, suffix: "+", label: "TRAINERS" },
     { num: 10, suffix: "K+", label: "MEMBERS" },
 ];
